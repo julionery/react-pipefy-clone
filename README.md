@@ -5,6 +5,7 @@
 
 ### :computer: Bibliotecas e ferramentas
  - [Styled Components](https://styled-components.com/)
+ - [React DNS](https://react-dnd.github.io/react-dnd/docs/overview)
  - [Immer](https://immerjs.github.io/immer/docs/introduction)
  
 ### :link: Links Úteis
@@ -12,7 +13,7 @@
 
 <h2 align="center">Demonstração</h2>
 
-![]()
+![](https://github.com/julionery/docs/blob/master/geral/pipefy-clone.gif?raw=true)
 
 ### :information_source: Como Usar
 
