@@ -5,6 +5,7 @@
 
 ### :computer: Bibliotecas e ferramentas
  - [Styled Components](https://styled-components.com/)
+ - [Immer](https://immerjs.github.io/immer/docs/introduction)
  
 ### :link: Links Úteis
 - [Avatars Adorable](http://avatars.adorable.io/)
