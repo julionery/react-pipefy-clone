@@ -5,7 +5,8 @@ import { Container } from './styles';
 function Header() {
   return (
     <Container>
-      <h1>Pipefy Clone</h1>
+      <h1>pipefy clone</h1>
+      <h2>Júlio Nery</h2>
     </Container>
   );
 }
