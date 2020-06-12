@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
+import { useDrop } from "react-dnd";
+
+import BoardContext from '../Board/context';
 
 import { MdAdd } from 'react-icons/md';
 
@@ -7,8 +10,33 @@ import Card from '../Card';
 import { Container } from './styles';
 
 function List({data, index: listIndex}) {
+  const ref = useRef();
+  const { move } = useContext(BoardContext);
+  
+  const [, dropRef] = useDrop({
+    accept: 'CARD',
+    hover(item, monitor){
+     const draggedListIndex = item.listIndex;
+     const targetListIndex = listIndex;
+ 
+     if(draggedListIndex === targetListIndex && data.cards.length > 0){
+       return;
+     }
+
+     const draggedIndex = item.index;
+     const targetIndex = data.cards.length;
+ 
+     move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+ 
+     item.index = targetIndex;
+     item.listIndex = targetListIndex;
+    }
+   });
+
+  dropRef(ref);
+
   return (
-    <Container done={ data.done }>
+    <Container ref={ref} done={ data.done }>
       <header>
         <div>
           <h2>{data.title}</h2>
